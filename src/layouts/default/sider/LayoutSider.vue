@@ -136,6 +136,7 @@
 
   .@{prefix-cls} {
     z-index: @layout-sider-fixed-z-index;
+    box-shadow: 2px 0 6px rgb(0 21 41 / 35%);
 
     &--fixed {
       position: fixed;
@@ -153,7 +154,7 @@
       background-color: @sider-dark-bg-color;
 
       .ant-layout-sider-trigger {
-        color: darken(@white, 25%);
+        //color: darken(@white, 25%);
         background-color: @trigger-dark-bg-color;
 
         &:hover {

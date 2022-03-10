@@ -29,6 +29,11 @@ export const columns: BasicColumn[] = [
     width: 200,
   },
   {
+    title: '角色',
+    dataIndex: 'role',
+    width: 200,
+  },
+  {
     title: '备注',
     dataIndex: 'remark',
   },
@@ -81,7 +86,7 @@ export const accountFormSchema: FormSchema[] = [
     ifShow: false,
   },
   {
-    label: '角色',
+    label: '角色名称',
     field: 'role',
     component: 'ApiSelect',
     componentProps: {

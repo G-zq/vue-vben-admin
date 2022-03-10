@@ -5,47 +5,47 @@ import type { SorterResult } from '../components/Table';
 export default {
   // basic-table setting
   table: {
-    // Form interface request general configuration
+    // 表单接口请求通用配置 Form interface request general configuration
     // support xxx.xxx.xxx
     fetchSetting: {
-      // The field name of the current page passed to the background
+      // 传给后台的当前页面的字段名 The field name of the current page passed to the background
       pageField: 'page',
-      // The number field name of each page displayed in the background
+      // 后台显示的每页的数字字段名称 The number field name of each page displayed in the background
       sizeField: 'pageSize',
-      // Field name of the form data returned by the interface
+      // 接口返回的表单数据的字段名 Field name of the form data returned by the interface
       listField: 'items',
-      // Total number of tables returned by the interface field name
+      // 接口字段名返回的表总数 Total number of tables returned by the interface field name
       totalField: 'total',
     },
-    // Number of pages that can be selected
+    // 可选择的页数 Number of pages that can be selected
     pageSizeOptions: ['10', '50', '80', '100'],
-    // Default display quantity on one page
+    // 一页默认显示数量 Default display quantity on one page
     defaultPageSize: 10,
-    // Default Size
-    defaultSize: 'middle',
-    // Custom general sort function
+    // 默认尺寸 Default Size default | middle | small
+    defaultSize: 'small',
+    // 自定义通用排序功能 Custom general sort function
     defaultSortFn: (sortInfo: SorterResult) => {
       const { field, order } = sortInfo;
       if (field && order) {
         return {
-          // The sort field passed to the backend you
+          // 传递给后端的排序字段 The sort field passed to the backend you
           field,
-          // Sorting method passed to the background asc/desc
+          // 传递给后台的排序方法 ascdesc Sorting method passed to the background asc/desc
           order,
         };
       } else {
         return {};
       }
     },
-    // Custom general filter function
+    // 自定义通用过滤功能 Custom general filter function
     defaultFilterFn: (data: Partial<Recordable<string[]>>) => {
       return data;
     },
   },
-  // scrollbar setting
+  // 滚动条设置 scrollbar setting
   scrollbar: {
-    // Whether to use native scroll bar
-    // After opening, the menu, modal, drawer will change the pop-up scroll bar to native
+    // 是否使用原生滚动条 Whether to use native scroll bar
+    // 打开后，menu、modal、drawer都会将弹出的滚动条改为native After opening, the menu, modal, drawer will change the pop-up scroll bar to native
     native: false,
   },
 };

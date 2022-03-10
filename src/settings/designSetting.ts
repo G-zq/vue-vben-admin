@@ -4,8 +4,9 @@ export const prefixCls = 'vben';
 
 export const darkMode = ThemeEnum.LIGHT;
 
-// app theme preset color
+// 应用主题预设颜色 app theme preset color
 export const APP_PRESET_COLOR_LIST: string[] = [
+  '#35956a',
   '#0960bd',
   '#0084f4',
   '#009688',
@@ -17,7 +18,7 @@ export const APP_PRESET_COLOR_LIST: string[] = [
   '#ff9800',
 ];
 
-// header preset color
+// header预设颜色 header preset color
 export const HEADER_PRESET_BG_COLOR_LIST: string[] = [
   '#ffffff',
   '#151515',
@@ -32,8 +33,9 @@ export const HEADER_PRESET_BG_COLOR_LIST: string[] = [
   '#383f45',
 ];
 
-// sider preset color
+// 侧边预设颜色 sider preset color
 export const SIDE_BAR_BG_COLOR_LIST: string[] = [
+  '#091a12',
   '#001529',
   '#212121',
   '#273352',
